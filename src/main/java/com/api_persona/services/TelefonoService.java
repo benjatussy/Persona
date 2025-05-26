@@ -19,7 +19,7 @@ public class TelefonoService {
         return telefonoRepository.findAll();
     }
 
-    private List<Telefonodto> getAllDTO() {
+    public List<Telefonodto> getAllDTO() {
         return telefonoRepository.findAll().stream().map(t -> new Telefonodto(
             t.getId(),
             t.getNumero(),

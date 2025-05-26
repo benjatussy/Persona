@@ -21,10 +21,10 @@ public class CorreoService {
         return correoRepository.findAll();
     }
 
-    private List<Correodto> getAllDTO(){
+    public List<Correodto> getAllDTO(){
         return correoRepository.findAll().stream().map(c -> new Correodto(
             c.getId(),
-            c.getEmail(),
+            c.getCorreo(),
             c.getPersona().getId()
         )).toList();
     }
@@ -42,7 +42,7 @@ public class CorreoService {
         Optional<Correo> correoOptional = correoRepository.findById(id);
         if (correoOptional.isPresent()) {
             Correo existingCorreo = correoOptional.get();
-            existingCorreo.setEmail(correoActualizado.getEmail());
+            existingCorreo.setCorreo(correoActualizado.getCorreo());
             existingCorreo.setPersona(correoActualizado.getPersona());
             return correoRepository.save(existingCorreo);
         } else {

@@ -8,7 +8,7 @@ import lombok.*;
 public class Correodto {
 
     private Integer id;
-    private String email;
+    private String correo;
     private Integer personaId;
 
 }
