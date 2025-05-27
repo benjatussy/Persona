@@ -14,7 +14,7 @@ import com.api_persona.services.PersonaService;
 @RequestMapping("/api/v1/persona")
 public class Personacontroller {
 
-       @Autowired
+    @Autowired
     private PersonaService personaService;
 
     @GetMapping
