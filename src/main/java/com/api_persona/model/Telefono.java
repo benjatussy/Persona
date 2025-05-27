@@ -1,6 +1,6 @@
 package com.api_persona.model;
 
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +20,7 @@ public class Telefono {
 
     @ManyToOne
     @JoinColumn(name = "persona_id", nullable = false)
+    @JsonIgnore
     private Persona persona;
 
 }

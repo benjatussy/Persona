@@ -19,9 +19,6 @@ public class Inscripciones {
     @Column(nullable = false, length = 45)
     private String curso;
 
-    @Column(nullable = false, length = 45)
-    private String institucion;
-
     @ManyToOne
     @JoinColumn(name = "persona_id", nullable = false)
     private Persona persona;
